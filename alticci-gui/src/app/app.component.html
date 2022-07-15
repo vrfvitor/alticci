@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="col-lg-5 col-md-7 col-sm-9 mx-auto">
+    <div class="card custom-card mt-5">
+      <div class="card-body">
+        <h5 class="card-title text-center">Alticci Sequence</h5>
+        <form class="form" [formGroup]="valueForm">
+          <div class="form-group d-flex align-items-center">
+            <label for="inputValue">For: </label>
+            <input id="inputValue" type="text" class="form-control rounded mx-4"
+                   placeholder="number" formControlName="value"/>
+            <button id="submitButton" type="button" class="btn btn-lg btn-primary btn-block text-uppercase"
+                    [disabled]="!valueForm.valid" (click)="onSubmit()">Calculate
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card custom-card mt-4">
+      <div class="card-body">
+        <h3 class="card-title mb-1 text-center">Result</h3>
+        <div class="mb-3 text-center small opacity-75">Alticci of {{lastCalculated}} is</div>
+        <div class="text-center result">{{result}}</div>
+      </div>
+    </div>
+  </div>
+</div>

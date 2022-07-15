@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    image: vrfvitor/alticci-api
+    container_name: alticci-api
+    networks:
+      - alt-bridge
+    ports:
+      - 8080:8080
+
+  spa:
+    image: vrfvitor/alticci-gui
+    container_name: alticci-gui
+    networks:
+      - alt-bridge
+    depends_on:
+      - api
+    ports:
+      - 4200:4200
+
+networks:
+  alt-bridge:
+    driver: bridge
