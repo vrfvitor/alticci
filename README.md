@@ -9,8 +9,8 @@
 
 #### Steps
 - Clone project
-- Make `./build` executable and execute it
+- Make `./build.sh` executable and execute it
   - Await images to build up
 - Run `docker-compose up`
-- Et voilá, gui will be available at `localhost:4200`
+- Et voilà, gui will be available at `localhost:4200`
 
